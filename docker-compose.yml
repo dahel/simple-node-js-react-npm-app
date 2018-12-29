@@ -1,13 +1,12 @@
 version: '2'
 services:
   jenkins:
-    user: root
-    image: 'jenkinsci/blueocean'
+    image: 'jenkins/jenkins'
     ports:
       - '80:8080'
+      - '443:8443'
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - jenkins_data:/var/jenkins_home
+      - 'jenkins_data:/bitnami'
 volumes:
   jenkins_data:
     driver: local

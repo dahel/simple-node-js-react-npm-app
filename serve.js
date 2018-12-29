@@ -5,5 +5,5 @@ var express = require('express'),
 
 app.use(express.static('public'));
 
-app.listen(port || 3001);
+app.listen(3001);
 console.log('Serving static files started...');
